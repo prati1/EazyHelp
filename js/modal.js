@@ -24,6 +24,12 @@ window.onclick = function(event) {
     }
 }
 
+var interview = document.getElementByID('setinterview');
+var interviewModal = document.getElementByID('interview');
+interview.onclick = function(){
+	interviewModal.style.display = "block";
+}
+
 /*var submit = document.getElementByID('submit');
 submit.onclick=function(){
 	

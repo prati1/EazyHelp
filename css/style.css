@@ -116,7 +116,6 @@ body {
 /*form styles*/
 #msform {
     text-align: center;
-    position: relative;
     margin-top: 30px;
 }
 
@@ -130,7 +129,7 @@ body {
     margin: 0 10%;
 
     /*stacking fieldsets above each other*/
-    position: relative;
+    position: inherit;
 }
 
 /*Hide all except first fieldset*/
@@ -143,9 +142,7 @@ body {
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 0px;
-    margin-bottom: 10px;
     width: 100%;
-    box-sizing: border-box;
     font-family: montserrat;
     color: #2C3E50;
     font-size: 13px;
@@ -155,8 +152,7 @@ body {
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
-    border: 1px solid #ee0979;
-    outline-width: 0;
+    border: 1px solid #0FA3B1;
     transition: All 0.5s ease-in;
     -webkit-transition: All 0.5s ease-in;
     -moz-transition: All 0.5s ease-in;
@@ -166,7 +162,7 @@ body {
 /*buttons*/
 #msform .action-button {
     width: 100px;
-    background: #ee0979;
+    background: #0FA3B1;
     font-weight: bold;
     color: white;
     border: 0 none;
@@ -177,7 +173,7 @@ body {
 }
 
 #msform .action-button:hover, #msform .action-button:focus {
-    box-shadow: 0 0 0 2px white, 0 0 0 3px #ee0979;
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #0FA3B1;
 }
 
 #msform .action-button-previous {
@@ -216,17 +212,22 @@ body {
 /*progressbar*/
 #progressbar {
     margin-bottom: 30px;
+    padding: 10px;
     overflow: hidden;
     /*CSS counters to number the steps*/
     counter-reset: step;
+    color: white;
 }
 
 #progressbar li {
     list-style-type: none;
+    display: inline-block;
     color: white;
+    background-color: #F87060;
     text-transform: uppercase;
+    padding: 10px;
     font-size: 9px;
-    width: 33.33%;
+    width: 16.33%;
     float: left;
     position: relative;
     letter-spacing: 1px;
@@ -234,8 +235,7 @@ body {
 
 #progressbar li:before {
     content: counter(step);
-    counter-increment: step;
-    width: 24px;
+    counter-increment: step; width: 24px;
     height: 24px;
     line-height: 26px;
     display: block;
@@ -266,7 +266,7 @@ body {
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
 #progressbar li.active:before, #progressbar li.active:after {
-    background: #ee0979;
+    background: #0FA3B1;
     color: white;
 }
 
@@ -279,7 +279,7 @@ body {
 .dme_link a {
     background: #FFF;
     font-weight: bold;
-    color: #ee0979;
+    color: #0FA3B1;
     border: 0 none;
     border-radius: 25px;
     cursor: pointer;
@@ -302,10 +302,10 @@ table tbody tr td li{
 
 
 .button-circle label{
-    position: relative;
-    border-radius: 50%;
-    width: auto;
-    height: auto;
+    /*position: relative;*/
+    border-radius: 80%;
+    width: 200;
+    height: 200;
 }
 
 #reviews{
